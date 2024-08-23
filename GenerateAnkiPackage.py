@@ -86,23 +86,20 @@ def createCardModel():
     templates=[
         {
             'name': 'Card 1',
-            'qfmt': '{{Simplifié}}',
-            'afmt': '{{FrontSide}}<hr id="answer">{{Pinyin}}<br>{{Traduction}}<br>{{Audio}}'
+            'qfmt': '<div class=question>{{Simplifié}}</div>',
+            'afmt': '<div class=reponse>{{FrontSide}}<hr id="answer">{{Pinyin}}<br>{{Traduction}}<br>{{Audio}}</div>'
         }
     ],
     css='''
         .card {
-            font-size: 30px;
+            font-size: 24px; /* Taille de police par défaut */
             text-align: center; /* Centrer le texte */
         }
-        .simplifie {
+        .question {
             font-size: 48px; /* Augmente la taille de la police pour le champ "simplifié" */
         }
-        .pinyin {
+        .reponse {
             font-size: 24px; /* Taille de la police pour le champ "pinyin" */
-        }
-        .traduction {
-            font-size: 24px; /* Taille de la police pour le champ "traduction" */
         }
         '''
     )
